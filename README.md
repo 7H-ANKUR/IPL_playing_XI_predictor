@@ -93,6 +93,9 @@ The engine builds the team in a **strict, constraint-first order** to prevent in
 
 ```bash
 pip install streamlit pandas numpy
+```
+
+
 🔮 Future Enhancements
 ----------------------
 
@@ -116,4 +119,5 @@ This project is built for **educational, analytical, and hackathon purposes only
 Built with ❤️ by **Ankur Pratap Singh**_Using Python, Pandas, SQLite, and Streamlit_
 
  If you want next, I can:  - Add **GitHub badges**  - Create a **LICENSE**  - Write **CONTRIBUTING.md**  - Add a **demo GIF / screenshots section**  Just tell me 👍   `
+
 
