@@ -56,10 +56,7 @@ This project is designed for **hackathons, analytics demos, and learning constra
 
 📂 Project Structure
 --------------------
-
-Plaintext
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   ├── app_final.py                 # Main Streamlit application  ├── player_name_cleaned_fixed.csv # Squad + role + nationality data  ├── stats_corrected.csv          # IPL stats (2008–2025)  ├── ipl_predictor.db             # Auto-generated SQLite database  └── README.md                    # Project documentation   `
+   ├── app_final.py                 # Main Streamlit application  ├── player_name_cleaned_fixed.csv # Squad + role + nationality data  ├── stats_corrected.csv          # IPL stats (2008–2025)  ├── ipl_predictor.db             # Auto-generated SQLite database  └── README.md                    # Project documentation   `
 
 📊 Dataset Description
 ----------------------
@@ -99,10 +96,6 @@ Contains historical IPL statistics (2008–2025):
 
 A player is considered a **pure bowler** if their role text indicates bowling but does **not** include "All-Rounder". This avoids false negatives caused by IPL-era data variance.
 
-Python
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   def is_pure_bowler_row(row):      role = str(row["Primary_Role"]).lower()      if "all-rounder" in role:          return False      role_keywords = [          "bowler", "fast", "pace", "medium", "spin", "spinner",           "leg break", "off break", "orthodox", "left arm", "right arm"      ]      return any(k in role for k in role_keywords)   `
-
 ### 🧩 Playing XI Selection Logic
 
 The engine builds the team in a strict, constraint-first order to prevent invalid squads:
@@ -138,7 +131,7 @@ Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQL
 
 Bash
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   streamlit run app_final.py   `
+streamlit run app_final.py   `
 
 _The SQLite database (ipl\_predictor.db) is created automatically on the first run._
 
@@ -149,7 +142,7 @@ To verify bowler detection against your specific dataset, you can run:
 
 Python
 
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   df["is_pure_bowler"] = df.apply(is_pure_bowler_row, axis=1)  print(df[df["is_pure_bowler"]][["Player_Name", "Primary_Role"]])   `
+df["is_pure_bowler"] = df.apply(is_pure_bowler_row, axis=1)  print(df[df["is_pure_bowler"]][["Player_Name", "Primary_Role"]])   `
 
 🏆 Comparison: Why This Project is Different
 --------------------------------------------
